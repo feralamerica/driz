@@ -306,6 +306,20 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .support-strip a:hover{transform:translateY(-1px);filter:brightness(1.12)}
   .ss-tt{background:var(--red);color:#fff}
   .ss-vm{background:#008CFF;color:#fff}
+  .others{margin-top:8px;border-top:1px solid var(--navy-line);padding-top:36px}
+  .others h4{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;color:var(--red-bright);margin:0 0 20px;display:flex;align-items:center;gap:10px}
+  .others h4::before{content:"";width:24px;height:2px;background:var(--red-bright)}
+  .other-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .ocard{display:flex;flex-direction:column;background:linear-gradient(160deg,var(--navy-panel-2),var(--navy));border:1px solid var(--navy-line);border-radius:14px;padding:18px 18px 16px;transition:transform .15s var(--ease),border-color .2s,box-shadow .2s}
+  .ocard:hover{transform:translateY(-3px);border-color:var(--red);box-shadow:var(--shadow-soft)}
+  .ocard .oname{font-family:var(--display);text-transform:uppercase;font-size:1.35rem;line-height:1;color:#fff;margin-bottom:6px}
+  .ocard .oname .red{color:var(--red-bright)}
+  .ocard .orole{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:var(--silver);margin-bottom:10px}
+  .ocard .otag{font-size:.82rem;color:var(--muted);line-height:1.4}
+  .ocard .oshare{margin-top:auto;padding-top:12px;font-family:var(--display);font-size:1.15rem;color:#fff;line-height:1}
+  .ocard .oshare span{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.1em;font-size:.54rem;color:var(--muted-dim);display:block;margin-top:3px}
+  .ocard .arrow{margin-top:12px;font-family:var(--stencil);text-transform:uppercase;letter-spacing:.12em;font-size:.6rem;color:var(--red-bright)}
+  @media(max-width:640px){.other-grid{grid-template-columns:1fr}}
   .photo-slot .ph{display:flex;flex-direction:column;align-items:center;gap:12px;color:var(--muted-dim);text-align:center;padding:24px}
   .photo-slot .ph svg{width:66px;height:66px;fill:var(--navy-line)}
   .photo-slot .ph span{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.16em;font-size:.64rem;line-height:1.5}
@@ -414,6 +428,37 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
         <a href="https://patch.com/california/los-angeles/jury-awards-millions-good-samaritans-weho-eatery-brawl" target="_blank" rel="noopener" style="color:var(--muted)">L.A. Patch</a> ·
         <a href="https://mynewsla.com/business/2018/11/23/woman-wins-sexual-harassment-suit-vs-three-blaze-pizza-franchises/" target="_blank" rel="noopener" style="color:var(--muted)">MyNewsLA (harassment verdict)</a>.
       </p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="others">
+      <h4>The other three defendants</h4>
+      <div class="other-grid">
+        <a class="ocard" href="maurice.html">
+          <div class="oname">Maurice <span class="red">Driz</span></div>
+          <div class="orole">The twin · Shawn's father</div>
+          <div class="otag">Convicted of felony assault.</div>
+          <div class="oshare">~$12.8M<span>Punitive share</span></div>
+          <div class="arrow">Open case file →</div>
+        </a>
+        <a class="ocard" href="shawn.html">
+          <div class="oname">Shawn <span class="red">Driz</span></div>
+          <div class="orole">The son</div>
+          <div class="otag">Found liable; the 4:45 bankruptcy.</div>
+          <div class="oshare">~$7.7M<span>Punitive share</span></div>
+          <div class="arrow">Open case file →</div>
+        </a>
+        <a class="ocard" href="joelson.html">
+          <div class="oname">Will <span class="red">Joelson</span></div>
+          <div class="orole">The family friend</div>
+          <div class="otag">Found liable; no criminal case.</div>
+          <div class="oshare">~$8.6M<span>Punitive share</span></div>
+          <div class="arrow">Open case file →</div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
