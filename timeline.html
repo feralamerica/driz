@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Timeline | The Driz Judgment</title>
-<meta name="description" content="An interactive timeline of the Driz litigation: the 2015 attack, the criminal case, the $72 million civil verdict, the eve-of-trial bankruptcy, and the fraudulent-transfer suit. Filter by case; every entry links to the court docket.">
+<meta name="description" content="An interactive timeline of the Driz litigation: the 2015 attack, the criminal case, the TMZ photographer’s suit, the $72 million civil verdict, the bankruptcy, and the fraudulent-transfer case. Filter by case; every entry links to the court docket.">
 <link rel="canonical" href="https://shawndriz.com/timeline.html">
 <meta property="og:title" content="Timeline | The Driz Judgment">
 <meta property="og:description" content="Found liable in a $72 million assault verdict; he denied kicking a victim, then admitted on video his testimony was false.">
@@ -341,11 +341,10 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .donate-float svg{width:15px;height:15px;fill:#fff}
   @media(max-width:640px){.dfile{grid-template-columns:1fr;gap:22px}.photo-slot{max-width:260px}.donate-float{font-size:.72rem;padding:10px 14px}}
 
-  /* timeline page */
-  .sec{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;color:#fff;font-size:1.5rem;margin:40px 0 6px}
   .tag-case{display:inline-block;font-family:var(--stencil);text-transform:uppercase;letter-spacing:.06em;font-size:.6rem;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
   .t-civil{background:var(--red-bright);color:#fff} .t-crim{background:#e8a33d;color:#26170a}
-  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c}
+  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c} .t-suraci{background:#a06cd5;color:#fff}
+  .sec{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;color:#fff;font-size:1.5rem;margin:40px 0 6px}
   .tl-filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px}
   .chip{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;font-weight:600;padding:8px 14px;border-radius:20px;border:1px solid var(--navy-line);color:var(--muted);background:transparent;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
   .chip:hover{color:#fff;border-color:var(--silver)}
@@ -355,16 +354,15 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .tl-item{position:relative;margin-bottom:14px}
   .tl-item::before{content:"";position:absolute;left:-27.5px;top:19px;width:13px;height:13px;border-radius:50%;background:var(--navy-panel);border:3px solid var(--muted-dim);z-index:2}
   .tl-item.civil::before{border-color:var(--red-bright)} .tl-item.crim::before{border-color:#e8a33d}
-  .tl-item.gun::before{border-color:#c86b3d} .tl-item.koral::before{border-color:#3d9be8} .tl-item.bk::before{border-color:#9aa4bd} .tl-item.incident::before{border-color:#9aa4bd}
+  .tl-item.gun::before{border-color:#c86b3d} .tl-item.koral::before{border-color:#3d9be8} .tl-item.bk::before{border-color:#9aa4bd} .tl-item.incident::before{border-color:#9aa4bd} .tl-item.suraci::before{border-color:#a06cd5}
   .tl-card{background:linear-gradient(160deg,var(--navy-panel-2),var(--navy));border:1px solid var(--navy-line);border-radius:12px;overflow:hidden;transition:border-color .2s}
-  .tl-item.open .tl-card{border-color:var(--navy-line)}
   .tl-head{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer}
   .tl-head .date{font-family:var(--stencil);color:#fff;font-size:.78rem;white-space:nowrap;min-width:96px}
   .tl-head .title{color:var(--ink);font-weight:500;flex:1;font-size:.95rem}
   .tl-head .exp{color:var(--muted-dim);font-size:1.3rem;line-height:1;transition:transform .2s}
   .tl-item.open .tl-head .exp{transform:rotate(45deg);color:var(--red-bright)}
   .tl-body{max-height:0;overflow:hidden;transition:max-height .28s ease}
-  .tl-item.open .tl-body{max-height:340px}
+  .tl-item.open .tl-body{max-height:360px}
   .tl-inner{padding:0 16px 15px;border-top:1px solid var(--navy-line);margin-top:2px}
   .tl-inner .where{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.05em;font-size:.62rem;color:var(--muted-dim);margin:12px 0 8px}
   .tl-inner p{color:var(--muted);font-size:.9rem;margin:0 0 12px;line-height:1.5}
@@ -411,6 +409,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       <button class="chip" data-filter="civil">Civil judgment</button>
       <button class="chip" data-filter="crim">Criminal</button>
       <button class="chip" data-filter="gun">Firearm</button>
+      <button class="chip" data-filter="suraci">Photographer</button>
       <button class="chip" data-filter="koral">Fraudulent transfer</button>
       <button class="chip" data-filter="bk">Bankruptcy</button>
     </div>
@@ -440,6 +439,12 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270</div><p>Plaintiffs represented by Gary Dordick, John Kristensen, and Joel Klevens.</p><a class="docket" href="hearings.html#h4">View on the court docket →</a></div></div>
         </div>
       </div>
+      <div class="tl-item suraci" data-case="suraci">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2016-12-12</span><span class="tag-case t-suraci">Suraci</span><span class="title">Photographer’s suit filed: Suraci v. Driz</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643372 · Dept. 71</div><p>TMZ photographer Robert Suraci, one of the two photographers the Drizes turned on first, sues. Defendants include all four attackers plus Aaron Torbati and Blaze Pizza, LLC.</p><a class="docket" href="hearings.html#s1">View on the court docket →</a></div></div>
+        </div>
+      </div>
       <div class="tl-item gun" data-case="gun">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2017</span><span class="tag-case t-gun">Firearm</span><span class="title">Alberto "Daniel" Driz charged as a felon in possession of a firearm</span><span class="exp">+</span></div>
@@ -450,6 +455,24 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
         <div class="tl-card">
           <div class="tl-head"><span class="date">2018 – 2021 <span style="opacity:.7">(confirming)</span></span><span class="tag-case t-crim">Criminal</span><span class="title">Criminal dispositions</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Foltz · Shapiro / Werksman / Shawky (Maurice)</div><p>Maurice Driz convicted of felony assault and sentenced. Alberto’s and Shawn’s assault charges end in post-disposition dismissal. Co-defendant Aaron Torbati convicted. Exact plea and sentencing dates pending minute orders.</p><a class="docket" href="hearings.html#h6">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item suraci" data-case="suraci">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2019-05-16</span><span class="tag-case t-suraci">Suraci</span><span class="title">Suraci case settles</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The court records an Order to Show Cause "after settlement as to Defendants Alberto Driz and Maurice Driz." The photographer has reached a deal.</p><a class="docket" href="hearings.html#s2">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item suraci" data-case="suraci">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2019-07-15</span><span class="tag-case t-suraci">Suraci</span><span class="title">Suraci jury trial vacated</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The trial, estimated at 7 to 10 days and coordinated with the Greene and Findel cases, is taken off calendar as the settlement is finalized.</p><a class="docket" href="hearings.html#s3">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item suraci" data-case="suraci">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2019-09-27</span><span class="tag-case t-suraci">Suraci</span><span class="title">Stipulated judgment; Blaze Pizza dismissed</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>A hearing on the Stipulation for Judgment and Entry of Judgment is held; Blaze Pizza, LLC and the Doe defendants are dismissed. The case is disposed. The amount is not public.</p><a class="docket" href="hearings.html#s4">View on the court docket →</a></div></div>
         </div>
       </div>
       <div class="tl-item civil" data-case="civil">
@@ -553,9 +576,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
 <script>
 (function(){
   var items=[].slice.call(document.querySelectorAll('.tl-item'));
-  items.forEach(function(it){
-    it.querySelector('.tl-head').addEventListener('click',function(){ it.classList.toggle('open'); });
-  });
+  items.forEach(function(it){ it.querySelector('.tl-head').addEventListener('click',function(){ it.classList.toggle('open'); }); });
   var chips=[].slice.call(document.querySelectorAll('#filters .chip'));
   var empty=document.getElementById('tl-empty');
   chips.forEach(function(c){
@@ -563,11 +584,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       chips.forEach(function(x){x.classList.remove('active');});
       c.classList.add('active');
       var f=c.getAttribute('data-filter'), shown=0;
-      items.forEach(function(it){
-        var ok = (f==='all') || it.getAttribute('data-case')===f;
-        it.style.display = ok ? '' : 'none';
-        if(ok) shown++;
-      });
+      items.forEach(function(it){ var ok=(f==='all')||it.getAttribute('data-case')===f; it.style.display=ok?'':'none'; if(ok)shown++; });
       empty.style.display = shown ? 'none' : 'block';
     });
   });
