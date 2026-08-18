@@ -343,7 +343,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
 
   .tag-case{display:inline-block;font-family:var(--stencil);text-transform:uppercase;letter-spacing:.06em;font-size:.6rem;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
   .t-civil{background:var(--red-bright);color:#fff} .t-crim{background:#e8a33d;color:#26170a}
-  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c} .t-suraci{background:#a06cd5;color:#fff}
+  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c} .t-suraci{background:#a06cd5;color:#fff} .t-findel{background:#1fb6a6;color:#052421}
   .sec{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;color:#fff;font-size:1.5rem;margin:40px 0 6px}
   .tl-filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px}
   .chip{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;font-weight:600;padding:8px 14px;border-radius:20px;border:1px solid var(--navy-line);color:var(--muted);background:transparent;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
@@ -354,7 +354,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .tl-item{position:relative;margin-bottom:14px}
   .tl-item::before{content:"";position:absolute;left:-27.5px;top:19px;width:13px;height:13px;border-radius:50%;background:var(--navy-panel);border:3px solid var(--muted-dim);z-index:2}
   .tl-item.civil::before{border-color:var(--red-bright)} .tl-item.crim::before{border-color:#e8a33d}
-  .tl-item.gun::before{border-color:#c86b3d} .tl-item.koral::before{border-color:#3d9be8} .tl-item.bk::before{border-color:#9aa4bd} .tl-item.incident::before{border-color:#9aa4bd} .tl-item.suraci::before{border-color:#a06cd5}
+  .tl-item.gun::before{border-color:#c86b3d} .tl-item.koral::before{border-color:#3d9be8} .tl-item.bk::before{border-color:#9aa4bd} .tl-item.incident::before{border-color:#9aa4bd} .tl-item.suraci::before{border-color:#a06cd5} .tl-item.findel::before{border-color:#1fb6a6}
   .tl-card{background:linear-gradient(160deg,var(--navy-panel-2),var(--navy));border:1px solid var(--navy-line);border-radius:12px;overflow:hidden;transition:border-color .2s}
   .tl-head{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer}
   .tl-head .date{font-family:var(--stencil);color:#fff;font-size:.78rem;white-space:nowrap;min-width:96px}
@@ -410,6 +410,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       <button class="chip" data-filter="crim">Criminal</button>
       <button class="chip" data-filter="gun">Firearm</button>
       <button class="chip" data-filter="suraci">Photographer</button>
+      <button class="chip" data-filter="findel">Findel</button>
       <button class="chip" data-filter="koral">Fraudulent transfer</button>
       <button class="chip" data-filter="bk">Bankruptcy</button>
     </div>
@@ -436,13 +437,31 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       <div class="tl-item civil" data-case="civil">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-12-08</span><span class="tag-case t-civil">Civil</span><span class="title">Civil complaint filed: Greene v. Driz</span><span class="exp">+</span></div>
-          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270</div><p>Plaintiffs represented by Gary Dordick, John Kristensen, and Joel Klevens.</p><a class="docket" href="hearings.html#h4">View on the court docket →</a></div></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270 (lead case)</div><p>Plaintiffs Anne Greene, her brother Matthew Greene, and their friend Jeremy Findel, represented by Gary Dordick and John Kristensen. The first of three related suits over the same attack.</p><a class="docket" href="hearings.html#h4">View on the court docket →</a></div></div>
         </div>
       </div>
       <div class="tl-item suraci" data-case="suraci">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-12-12</span><span class="tag-case t-suraci">Suraci</span><span class="title">Photographer’s suit filed: Suraci v. Driz</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643372 · Dept. 71</div><p>TMZ photographer Robert Suraci, one of the two photographers the Drizes turned on first, sues. Defendants include all four attackers plus Aaron Torbati and Blaze Pizza, LLC.</p><a class="docket" href="hearings.html#s1">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item findel" data-case="findel">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2016-12-12</span><span class="tag-case t-findel">Findel</span><span class="title">Findel’s own suit filed: Findel v. Driz</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643450</div><p>Jeremy Findel, beaten in the same attack, files his own parallel lawsuit the same day as Suraci, against the same defendant group. Represented by John Kristensen and Todd Friedman.</p><a class="docket" href="hearings.html#f1">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item civil" data-case="civil">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2017-12-06</span><span class="tag-case t-civil">Civil</span><span class="title">Three cases formally related</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Judge Dennis J. Landin</div><p>The court relates the three suits over the attack — Greene (BC643270), Suraci (BC643372), and Findel (BC643450) — to be handled together, with Greene as the lead case.</p><a class="docket" href="hearings.html#h-rel">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item civil" data-case="civil">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2017</span><span class="tag-case t-civil">Civil</span><span class="title">Torbati sues the victims back</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270</div><p>Aaron Joseph Torbati, one of the attacker group, files a cross-complaint against Anne Greene and her brother Matthew Greene — the people they beat.</p><a class="docket" href="hearings.html#h-cross">View on the court docket →</a></div></div>
         </div>
       </div>
       <div class="tl-item gun" data-case="gun">
@@ -455,6 +474,12 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
         <div class="tl-card">
           <div class="tl-head"><span class="date">2018 – 2021 <span style="opacity:.7">(confirming)</span></span><span class="tag-case t-crim">Criminal</span><span class="title">Criminal dispositions</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Foltz · Shapiro / Werksman / Shawky (Maurice)</div><p>Maurice Driz convicted of felony assault and sentenced. Alberto’s and Shawn’s assault charges end in post-disposition dismissal. Co-defendant Aaron Torbati convicted. Exact plea and sentencing dates pending minute orders.</p><a class="docket" href="hearings.html#h6">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item suraci" data-case="suraci">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2018-10-24</span><span class="tag-case t-suraci">Suraci</span><span class="title">Joelson settles the photographer’s case first</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The court grants a good-faith settlement determination (Code Civ. Proc. §877.6) for defendant William Joelson — represented by attorney Lewis Adelson — nearly a year before the Driz brothers settle.</p><a class="docket" href="hearings.html#s1a">View on the court docket →</a></div></div>
         </div>
       </div>
       <div class="tl-item suraci" data-case="suraci">
@@ -499,6 +524,12 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk</div><p>The jury rejects every self-defense story and returns a verdict of $72,645,492 against all four defendants.</p><a class="docket" href="hearings.html#h10">View on the court docket →</a></div></div>
         </div>
       </div>
+      <div class="tl-item findel" data-case="findel">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2021-06-29</span><span class="tag-case t-findel">Findel</span><span class="title">Findel’s parallel case reaches the eve of trial</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Spring Street Courthouse · Dept. 8</div><p>After 103 docket entries and a designated long-cause (multi-week) trial setting, Jeremy Findel’s own jury trial is taken off calendar and his case is disposed — the eve-of-trial resolution pattern.</p><a class="docket" href="hearings.html#f2">View on the court docket →</a></div></div>
+        </div>
+      </div>
       <div class="tl-item bk" data-case="bk">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2021</span><span class="tag-case t-bk">Bankruptcy</span><span class="title">Nondischargeability adversary filed</span><span class="exp">+</span></div>
@@ -539,6 +570,12 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
         <div class="tl-card">
           <div class="tl-head"><span class="date">2026-07-15</span><span class="tag-case t-civil">Civil</span><span class="title">Enforcement hearing held</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Dept. 729 (judgment enforcement)</div><p>Ex parte on a claim-of-exemption timeliness issue; the motion is granted.</p><a class="docket" href="hearings.html#h17">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item civil" data-case="civil">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2026-11-09</span><span class="tag-case t-civil">Civil</span><span class="title">Motion for a charging order</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Dept. 729 (judgment enforcement)</div><p>Plaintiffs move for a charging order — the tool used to seize a debtor’s ownership interest in a business or LLC. This hearing was set for November 9, 2026, but the court has already vacated (taken off calendar) that date before it arrives; the reason is not yet in the public record.</p><a class="docket" href="hearings.html#h17b">View on the court docket →</a></div></div>
         </div>
       </div>
       <div class="tl-item civil" data-case="civil">
