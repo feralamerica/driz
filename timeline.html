@@ -349,6 +349,11 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .chip{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;font-weight:600;padding:8px 14px;border-radius:20px;border:1px solid var(--navy-line);color:var(--muted);background:transparent;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
   .chip:hover{color:#fff;border-color:var(--silver)}
   .chip.active{background:var(--red);color:#fff;border-color:var(--red)}
+  .filt-label{font-family:var(--stencil);text-transform:uppercase;letter-spacing:.12em;font-size:.64rem;color:var(--muted-dim);align-self:center;margin-right:2px}
+  .tl-filters-people{margin:2px 0 6px}
+  .chip-v{border-color:#33578a} .chip-d{border-color:#7a3550}
+  .chip-v:hover{border-color:#5f8fc9} .chip-d:hover{border-color:var(--red-bright)}
+  .chip-v.active{background:#3d6fb0;border-color:#3d6fb0;color:#fff} .chip-d.active{background:var(--red);border-color:var(--red);color:#fff}
   .tl{position:relative;margin-top:22px;padding-left:34px}
   .tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--navy-line)}
   .tl-item{position:relative;margin-bottom:14px}
@@ -398,187 +403,200 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
     <a class="backfile" href="index.html">← The Driz Judgment · the full case</a>
     <p class="eyebrow reveal in">A Feral America Investigation</p>
     <h1 class="reveal in" style="font-family:var(--display);text-transform:uppercase;font-size:clamp(2.6rem,7vw,4.6rem);line-height:.95;color:#fff;margin:.05em 0 .15em">The <span class="red" style="color:var(--red-bright)">Timeline</span></h1>
-    <p class="lead reveal in" style="font-size:1.1rem;max-width:72ch">Nearly a decade of it, from the beating outside The Nice Guy to the enforcement fights still on the calendar. Filter by case, tap any event to open it, and click through to the full court docket for the record behind it.</p>
+    <p class="lead reveal in" style="font-size:1.1rem;max-width:72ch">Nearly a decade of it, from the beating outside The Nice Guy to the enforcement fights still on the calendar. Filter by case or by person, tap any event to open it, and click through to the full court docket for the record behind it.</p>
   </div>
 </section>
 
 <section style="padding-top:8px">
   <div class="wrap">
     <div class="tl-filters" id="filters">
+      <span class="filt-label">By case:</span>
       <button class="chip active" data-filter="all">All</button>
       <button class="chip" data-filter="civil">Civil judgment</button>
       <button class="chip" data-filter="crim">Criminal</button>
       <button class="chip" data-filter="gun">Firearm</button>
       <button class="chip" data-filter="suraci">Photographer</button>
-      <button class="chip" data-filter="findel">Findel</button>
+      <button class="chip" data-filter="findel">Findel’s case</button>
       <button class="chip" data-filter="koral">Fraudulent transfer</button>
       <button class="chip" data-filter="bk">Bankruptcy</button>
     </div>
+    <div class="tl-filters tl-filters-people" id="filters-people">
+      <span class="filt-label">By person:</span>
+      <button class="chip chip-v" data-person="anne">Anne Greene</button>
+      <button class="chip chip-v" data-person="matthew">Matthew Greene</button>
+      <button class="chip chip-v" data-person="findel">Jeremy Findel</button>
+      <button class="chip chip-d" data-person="alberto">Alberto Driz</button>
+      <button class="chip chip-d" data-person="maurice">Maurice Driz</button>
+      <button class="chip chip-d" data-person="shawn">Shawn Driz</button>
+      <button class="chip chip-d" data-person="torbati">Aaron Torbati</button>
+      <button class="chip chip-d" data-person="joelson">William Joelson</button>
+      <button class="chip chip-d" data-person="koral">Peter Koral</button>
+    </div>
 
     <div class="tl" id="timeline">
-      <div class="tl-item incident" data-case="incident">
+      <div class="tl-item incident" data-case="incident" data-people="anne matthew findel alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2015-04-17</span><span class="tag-case t-bk">Incident</span><span class="title">The attack outside The Nice Guy</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">On La Cienega Blvd., West Hollywood</div><p>Anne Greene, her brother Matthew, and their friend Jeremy Findel are beaten after stepping in to help. Anne suffers a traumatic brain injury.</p><a class="docket" href="hearings.html#h1">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item crim" data-case="crim">
+      <div class="tl-item crim" data-case="crim" data-people="alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2015-04-30</span><span class="tag-case t-crim">Criminal</span><span class="title">Felony complaints filed</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Clara Shortridge Foltz Criminal Justice Center, downtown · No. BA436130 · DDA Allison Willhite</div><p>Charges of assault by means of force likely to produce great bodily injury (Penal Code 245(a)(4)).</p><a class="docket" href="hearings.html#h2">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item crim" data-case="crim">
+      <div class="tl-item crim" data-case="crim" data-people="alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-03-14</span><span class="tag-case t-crim">Criminal</span><span class="title">Informations filed</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">LA County District Attorney · Foltz</div><p>The criminal case advances toward trial against the group.</p><a class="docket" href="hearings.html#h3">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-12-08</span><span class="tag-case t-civil">Civil</span><span class="title">Civil complaint filed: Greene v. Driz</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270 (lead case)</div><p>Plaintiffs Anne Greene, her brother Matthew Greene, and their friend Jeremy Findel, represented by Gary Dordick and John Kristensen. The first of three related suits over the same attack.</p><a class="docket" href="hearings.html#h4">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item suraci" data-case="suraci">
+      <div class="tl-item suraci" data-case="suraci" data-people="alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-12-12</span><span class="tag-case t-suraci">Suraci</span><span class="title">Photographer’s suit filed: Suraci v. Driz</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643372 · Dept. 71</div><p>TMZ photographer Robert Suraci, one of the two photographers the Drizes turned on first, sues. Defendants include all four attackers plus Aaron Torbati and Blaze Pizza, LLC.</p><a class="docket" href="hearings.html#s1">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item findel" data-case="findel">
+      <div class="tl-item findel" data-case="findel" data-people="findel alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2016-12-12</span><span class="tag-case t-findel">Findel</span><span class="title">Findel’s own suit filed: Findel v. Driz</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643450</div><p>Jeremy Findel, beaten in the same attack, files his own parallel lawsuit the same day as Suraci, against the same defendant group. Represented by John Kristensen and Todd Friedman.</p><a class="docket" href="hearings.html#f1">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2017-12-06</span><span class="tag-case t-civil">Civil</span><span class="title">Three cases formally related</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Judge Dennis J. Landin</div><p>The court relates the three suits over the attack — Greene (BC643270), Suraci (BC643372), and Findel (BC643450) — to be handled together, with Greene as the lead case.</p><a class="docket" href="hearings.html#h-rel">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="torbati anne matthew">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2017</span><span class="tag-case t-civil">Civil</span><span class="title">Torbati sues the victims back</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · No. BC643270</div><p>Aaron Joseph Torbati, one of the attacker group, files a cross-complaint against Anne Greene and her brother Matthew Greene — the people they beat.</p><a class="docket" href="hearings.html#h-cross">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item gun" data-case="gun">
+      <div class="tl-item gun" data-case="gun" data-people="alberto">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2017</span><span class="tag-case t-gun">Firearm</span><span class="title">Alberto "Daniel" Driz charged as a felon in possession of a firearm</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Airport Courthouse · No. SA096430 · defense Blair Berk</div><p>He is later convicted, a charge that by its own terms means he was already a felon.</p><a class="docket" href="hearings.html#h5">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item crim" data-case="crim">
+      <div class="tl-item crim" data-case="crim" data-people="alberto maurice shawn torbati">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2018 – 2021 <span style="opacity:.7">(confirming)</span></span><span class="tag-case t-crim">Criminal</span><span class="title">Criminal dispositions</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Foltz · Shapiro / Werksman / Shawky (Maurice)</div><p>Maurice Driz convicted of felony assault and sentenced. Alberto’s and Shawn’s assault charges end in post-disposition dismissal. Co-defendant Aaron Torbati convicted. Exact plea and sentencing dates pending minute orders.</p><a class="docket" href="hearings.html#h6">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item suraci" data-case="suraci">
+      <div class="tl-item suraci" data-case="suraci" data-people="joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2018-10-24</span><span class="tag-case t-suraci">Suraci</span><span class="title">Joelson settles the photographer’s case first</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The court grants a good-faith settlement determination (Code Civ. Proc. §877.6) for defendant William Joelson — represented by attorney Lewis Adelson — nearly a year before the Driz brothers settle.</p><a class="docket" href="hearings.html#s1a">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item suraci" data-case="suraci">
+      <div class="tl-item suraci" data-case="suraci" data-people="alberto maurice">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2019-05-16</span><span class="tag-case t-suraci">Suraci</span><span class="title">Suraci case settles</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The court records an Order to Show Cause "after settlement as to Defendants Alberto Driz and Maurice Driz." The photographer has reached a deal.</p><a class="docket" href="hearings.html#s2">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item suraci" data-case="suraci">
+      <div class="tl-item suraci" data-case="suraci" data-people="alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2019-07-15</span><span class="tag-case t-suraci">Suraci</span><span class="title">Suraci jury trial vacated</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>The trial, estimated at 7 to 10 days and coordinated with the Greene and Findel cases, is taken off calendar as the settlement is finalized.</p><a class="docket" href="hearings.html#s3">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item suraci" data-case="suraci">
+      <div class="tl-item suraci" data-case="suraci" data-people="alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2019-09-27</span><span class="tag-case t-suraci">Suraci</span><span class="title">Stipulated judgment; Blaze Pizza dismissed</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk Courthouse · Dept. 71</div><p>A hearing on the Stipulation for Judgment and Entry of Judgment is held; Blaze Pizza, LLC and the Doe defendants are dismissed. The case is disposed. The amount is not public.</p><a class="docket" href="hearings.html#s4">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">Dec 2019</span><span class="tag-case t-civil">Civil</span><span class="title">Defendants’ attorney relieved</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk · counsel Maria Hall withdrawn</div><p>All four defendants proceed toward the civil trial representing themselves.</p><a class="docket" href="hearings.html#h7">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item bk" data-case="bk">
+      <div class="tl-item bk" data-case="bk" data-people="shawn">
         <div class="tl-card">
           <div class="tl-head"><span class="date">Jul 2021 <span style="opacity:.7">(eve of trial)</span></span><span class="tag-case t-bk">Bankruptcy</span><span class="title">Shawn Driz files Chapter 7 at 4:45 p.m.</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">U.S. Bankruptcy Court, C.D. Cal. · No. 2:21-bk-15494-VZ</div><p>An automatic stay is triggered in a bid to blow up the civil trial before it starts.</p><a class="docket" href="hearings.html#h8">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item bk" data-case="bk">
+      <div class="tl-item bk" data-case="bk" data-people="shawn">
         <div class="tl-card">
           <div class="tl-head"><span class="date">Jul 2021 <span style="opacity:.7">(+2 days)</span></span><span class="tag-case t-bk">Bankruptcy</span><span class="title">Bankruptcy stay lifted</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">C.D. Cal.</div><p>The civil trial goes ahead anyway.</p><a class="docket" href="hearings.html#h9">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">Jul 2021</span><span class="tag-case t-civil">Civil</span><span class="title">Three-week jury trial and verdict</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk</div><p>The jury rejects every self-defense story and returns a verdict of $72,645,492 against all four defendants.</p><a class="docket" href="hearings.html#h10">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item findel" data-case="findel">
+      <div class="tl-item findel" data-case="findel" data-people="findel alberto maurice shawn torbati joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2021-06-29</span><span class="tag-case t-findel">Findel</span><span class="title">Findel’s parallel case reaches the eve of trial</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Spring Street Courthouse · Dept. 8</div><p>After 103 docket entries and a designated long-cause (multi-week) trial setting, Jeremy Findel’s own jury trial is taken off calendar and his case is disposed — the eve-of-trial resolution pattern.</p><a class="docket" href="hearings.html#f2">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item bk" data-case="bk">
+      <div class="tl-item bk" data-case="bk" data-people="shawn">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2021</span><span class="tag-case t-bk">Bankruptcy</span><span class="title">Nondischargeability adversary filed</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">C.D. Cal. · No. 2:21-ap-01199</div><p>Plaintiffs move to keep the judgment alive as a debt for "willful and malicious injury," which bankruptcy cannot erase.</p><a class="docket" href="hearings.html#h11">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item bk" data-case="bk">
+      <div class="tl-item bk" data-case="bk" data-people="shawn">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2021</span><span class="tag-case t-bk">Bankruptcy</span><span class="title">Trustee files Report of No Distribution</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">C.D. Cal.</div><p>Shawn Driz is recorded on the federal books as a "no asset" case.</p><a class="docket" href="hearings.html#h12">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item koral" data-case="koral">
+      <div class="tl-item koral" data-case="koral" data-people="anne matthew alberto koral">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2023-10-12</span><span class="tag-case t-koral">Koral</span><span class="title">Greene v. Koral filed</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">LA Superior Court · No. 23STCV24928 · Dept. O · Judge H. Jay Ford III</div><p>Alleges Alberto Driz fraudulently transferred his 49% Blaze Pizza stake to Peter Koral to look judgment-proof.</p><a class="docket" href="hearings.html#h13">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2024</span><span class="tag-case t-civil">Civil</span><span class="title">Judgment-debtor examinations</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Stanley Mosk · enforcement</div><p>Plaintiffs compel the defendants to answer under oath about where their money is.</p><a class="docket" href="hearings.html#h14">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item koral" data-case="koral">
+      <div class="tl-item koral" data-case="koral" data-people="anne matthew alberto koral">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2024-04-25</span><span class="tag-case t-koral">Koral</span><span class="title">Demurrers overruled</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Dept. O · Judge H. Jay Ford III</div><p>The fraudulent-transfer, civil-conspiracy, and unfair-competition claims survive. The case advances past pleadings.</p><a class="docket" href="hearings.html#h15">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item koral" data-case="koral">
-        <div class="tl-card">
-          <div class="tl-head"><span class="date">2025-02-10</span><span class="tag-case t-koral">Koral</span><span class="title">Trial date set <span style="opacity:.7">(per the 2024 ruling)</span></span><span class="exp">+</span></div>
-          <div class="tl-body"><div class="tl-inner"><div class="where">Dept. O</div><p>Current posture being confirmed.</p><a class="docket" href="hearings.html#h16">View on the court docket →</a></div></div>
-        </div>
-      </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2026-07-15</span><span class="tag-case t-civil">Civil</span><span class="title">Enforcement hearing held</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Dept. 729 (judgment enforcement)</div><p>Ex parte on a claim-of-exemption timeliness issue; the motion is granted.</p><a class="docket" href="hearings.html#h17">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item koral" data-case="koral" data-people="anne matthew alberto koral">
+        <div class="tl-card">
+          <div class="tl-head"><span class="date">2026-10-12</span><span class="tag-case t-koral">Koral</span><span class="title">Fraudulent-transfer jury trial set (Santa Monica)</span><span class="exp">+</span></div>
+          <div class="tl-body"><div class="tl-inner"><div class="where">Santa Monica Courthouse · Dept. O · Judge H. Jay Ford III</div><p>After repeated continuances, the trial is currently set for October 12, 2026, with a final status conference October 5. A year of hard-fought discovery — motions to quash, protective orders, sanctions. Defendants include Peter Koral, Alberto Driz, and a chain of Blaze Pizza (“BP”) LLCs. Pending.</p><a class="docket" href="hearings.html#h16">View on the court docket →</a></div></div>
+        </div>
+      </div>
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2026-11-09</span><span class="tag-case t-civil">Civil</span><span class="title">Motion for a charging order</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Dept. 729 (judgment enforcement)</div><p>Plaintiffs move for a charging order — the tool used to seize a debtor’s ownership interest in a business or LLC. This hearing was set for November 9, 2026, but the court has already vacated (taken off calendar) that date before it arrives; the reason is not yet in the public record.</p><a class="docket" href="hearings.html#h17b">View on the court docket →</a></div></div>
         </div>
       </div>
-      <div class="tl-item civil" data-case="civil">
+      <div class="tl-item civil" data-case="civil" data-people="anne matthew findel alberto maurice shawn joelson">
         <div class="tl-card">
           <div class="tl-head"><span class="date">2026-11-16</span><span class="tag-case t-civil">Civil</span><span class="title">Claim of Exemption / Third-Party Claim hearing set</span><span class="exp">+</span></div>
           <div class="tl-body"><div class="tl-inner"><div class="where">Dept. 729</div><p>Pending. Plaintiffs are moving on assets whose ownership a third party disputes.</p><a class="docket" href="hearings.html#h18">View on the court docket →</a></div></div>
@@ -614,14 +632,19 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
 (function(){
   var items=[].slice.call(document.querySelectorAll('.tl-item'));
   items.forEach(function(it){ it.querySelector('.tl-head').addEventListener('click',function(){ it.classList.toggle('open'); }); });
-  var chips=[].slice.call(document.querySelectorAll('#filters .chip'));
+  var chips=[].slice.call(document.querySelectorAll('.tl-filters .chip'));
   var empty=document.getElementById('tl-empty');
   chips.forEach(function(c){
     c.addEventListener('click',function(){
       chips.forEach(function(x){x.classList.remove('active');});
       c.classList.add('active');
-      var f=c.getAttribute('data-filter'), shown=0;
-      items.forEach(function(it){ var ok=(f==='all')||it.getAttribute('data-case')===f; it.style.display=ok?'':'none'; if(ok)shown++; });
+      var cf=c.getAttribute('data-filter'), pf=c.getAttribute('data-person'), shown=0;
+      items.forEach(function(it){
+        var ok;
+        if(pf){ ok=(' '+(it.getAttribute('data-people')||'')+' ').indexOf(' '+pf+' ')>-1; }
+        else { ok=(cf==='all')||it.getAttribute('data-case')===cf; }
+        it.style.display=ok?'':'none'; if(ok)shown++;
+      });
       empty.style.display = shown ? 'none' : 'block';
     });
   });
