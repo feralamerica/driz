@@ -349,10 +349,10 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
   .lcase .num{font-size:.72rem;color:var(--muted-dim)}
   .lcase p{font-size:.8rem;color:var(--muted);margin:9px 0 0;line-height:1.45}
   .c-civil{border-left-color:var(--red-bright)} .c-crim{border-left-color:#e8a33d}
-  .c-gun{border-left-color:#c86b3d} .c-koral{border-left-color:#3d9be8} .c-bk{border-left-color:#9aa4bd} .c-suraci{border-left-color:#a06cd5}
+  .c-gun{border-left-color:#c86b3d} .c-koral{border-left-color:#3d9be8} .c-bk{border-left-color:#9aa4bd} .c-suraci{border-left-color:#a06cd5} .c-findel{border-left-color:#1fb6a6}
   .tag-case{display:inline-block;font-family:var(--stencil);text-transform:uppercase;letter-spacing:.06em;font-size:.6rem;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
   .t-civil{background:var(--red-bright);color:#fff} .t-crim{background:#e8a33d;color:#26170a}
-  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c} .t-suraci{background:#a06cd5;color:#fff}
+  .t-gun{background:#c86b3d;color:#fff} .t-koral{background:#3d9be8;color:#08122b} .t-bk{background:#9aa4bd;color:#10182c} .t-suraci{background:#a06cd5;color:#fff} .t-findel{background:#1fb6a6;color:#052421}
   .htable-wrap{overflow-x:auto;border:1px solid var(--navy-line);border-radius:14px;margin-top:10px;box-shadow:var(--shadow-soft)}
   table.hearings{width:100%;border-collapse:collapse;min-width:760px;font-size:.9rem}
   table.hearings th{background:var(--navy-panel);color:var(--silver);font-family:var(--stencil);text-transform:uppercase;letter-spacing:.07em;font-size:.66rem;text-align:left;padding:12px 14px}
@@ -393,7 +393,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
     <a class="backfile" href="index.html">← The Driz Judgment · the full case</a>
     <p class="eyebrow reveal in">A Feral America Investigation</p>
     <h1 class="reveal in" style="font-family:var(--display);text-transform:uppercase;font-size:clamp(2.6rem,7vw,4.6rem);line-height:.95;color:#fff;margin:.05em 0 .15em">Court <span class="red" style="color:var(--red-bright)">Hearings</span></h1>
-    <p class="lead page-lead reveal in" style="font-size:1.1rem">The Driz matter is not one case. It is a tangle of them... a criminal prosecution, a $72 million civil judgment, a TMZ photographer’s own lawsuit, an eve-of-trial bankruptcy, and a fraudulent-transfer suit chasing the money. Across nearly a decade there have been venue changes, judge reassignments, and prosecutor swaps. This page tracks the moving pieces, color-coded by case, every entry drawn from the court record.</p>
+    <p class="lead page-lead reveal in" style="font-size:1.1rem">The Driz matter is not one case. It is a tangle of them... a criminal prosecution, a $72 million civil judgment, two more victims’ parallel lawsuits, an eve-of-trial bankruptcy, and a fraudulent-transfer suit chasing the money. Across nearly a decade there have been venue changes, judge reassignments, and prosecutor swaps. This page tracks the moving pieces, color-coded by case, every entry drawn from the court record.</p>
   </div>
 </section>
 
@@ -405,6 +405,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       <div class="lcase c-crim"><h4>Criminal case</h4><div class="num">People v. Driz et al. · No. BA436130 · Foltz</div><p>The prosecution of the 2015 assault.</p></div>
       <div class="lcase c-gun"><h4>Firearm case</h4><div class="num">People v. A. Driz · No. SA096430 · Airport Cthse.</div><p>Alberto’s separate felon-in-possession conviction.</p></div>
       <div class="lcase c-suraci"><h4>Photographer’s suit</h4><div class="num">Suraci v. Driz · No. BC643372 · Stanley Mosk</div><p>The TMZ photographer the Drizes attacked first. Settled in 2019.</p></div>
+      <div class="lcase c-findel"><h4>Findel’s suit</h4><div class="num">Findel v. Driz · No. BC643450 · Stanley Mosk</div><p>Jeremy Findel’s own parallel suit against the same attackers. Fought to the eve of a jury trial in 2021.</p></div>
       <div class="lcase c-koral"><h4>Fraudulent transfer</h4><div class="num">Greene v. Koral · No. 23STCV24928 · Dept. O</div><p>The suit to unwind the moved Blaze Pizza stake.</p></div>
       <div class="lcase c-bk"><h4>Bankruptcy</h4><div class="num">In re Shawn Driz · No. 2:21-bk-15494 (+ 2:21-ap-01199)</div><p>The eve-of-trial filing and the nondischargeability fight.</p></div>
     </div>
@@ -440,8 +441,8 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
             <td class="date">2016-12-08</td>
             <td><span class="tag-case t-civil">Civil</span></td>
             <td><span class="what">Civil complaint filed: Greene v. Driz</span></td>
-            <td>Stanley Mosk Courthouse · No. BC643270</td>
-            <td>Plaintiffs represented by Gary Dordick, John Kristensen, and Joel Klevens.</td>
+            <td>Stanley Mosk Courthouse · No. BC643270 <span style="opacity:.7">(lead case)</span></td>
+            <td>Plaintiffs Anne Greene, her brother Matthew Greene, and their friend Jeremy Findel, represented by Gary Dordick and John Kristensen. The first of three related suits over the same attack.</td>
           </tr>
           <tr id="s1">
             <td class="date">2016-12-12</td>
@@ -449,6 +450,27 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
             <td><span class="what">Photographer’s suit filed: Suraci v. Driz</span></td>
             <td>Stanley Mosk Courthouse · No. BC643372 · Dept. 71</td>
             <td>TMZ photographer Robert Suraci, one of the two photographers the Drizes turned on first, sues. Defendants include all four attackers plus Aaron Torbati and Blaze Pizza, LLC.</td>
+          </tr>
+          <tr id="f1">
+            <td class="date">2016-12-12</td>
+            <td><span class="tag-case t-findel">Findel</span></td>
+            <td><span class="what">Findel’s own suit filed: Findel v. Driz</span></td>
+            <td>Stanley Mosk Courthouse · No. BC643450</td>
+            <td>Jeremy Findel, beaten in the same attack, files his own parallel lawsuit the same day as Suraci, against the same defendant group. Represented by John Kristensen and Todd Friedman.</td>
+          </tr>
+          <tr id="h-rel">
+            <td class="date">2017-12-06</td>
+            <td><span class="tag-case t-civil">Civil</span></td>
+            <td><span class="what">Three cases formally related</span></td>
+            <td>Stanley Mosk Courthouse · Judge Dennis J. Landin</td>
+            <td>The court relates the three suits over the attack — Greene (BC643270), Suraci (BC643372), and Findel (BC643450) — to be handled together, with Greene as the lead case.</td>
+          </tr>
+          <tr id="h-cross">
+            <td class="date">2017</td>
+            <td><span class="tag-case t-civil">Civil</span></td>
+            <td><span class="what">Torbati sues the victims back</span></td>
+            <td>Stanley Mosk Courthouse · No. BC643270</td>
+            <td>Aaron Joseph Torbati, one of the attacker group, files a cross-complaint against Anne Greene and her brother Matthew Greene — the people they beat.</td>
           </tr>
           <tr id="h5">
             <td class="date">2017</td>
@@ -463,6 +485,13 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
             <td><span class="what">Criminal dispositions</span></td>
             <td>Foltz · Shapiro / Werksman / Shawky (Maurice)</td>
             <td>Maurice Driz convicted of felony assault and sentenced. Alberto’s and Shawn’s assault charges end in post-disposition dismissal. Co-defendant Aaron Torbati convicted. Exact plea and sentencing dates pending minute orders.</td>
+          </tr>
+          <tr id="s1a">
+            <td class="date">2018-10-24</td>
+            <td><span class="tag-case t-suraci">Suraci</span></td>
+            <td><span class="what">Joelson settles the photographer’s case first</span></td>
+            <td>Stanley Mosk Courthouse · Dept. 71</td>
+            <td>The court grants a good-faith settlement determination (Code Civ. Proc. §877.6) for defendant William Joelson — represented by attorney Lewis Adelson — nearly a year before the Driz brothers settle.</td>
           </tr>
           <tr id="s2">
             <td class="date">2019-05-16</td>
@@ -513,6 +542,13 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
             <td>Stanley Mosk</td>
             <td>The jury rejects every self-defense story and returns a verdict of $72,645,492 against all four defendants.</td>
           </tr>
+          <tr id="f2">
+            <td class="date">2021-06-29</td>
+            <td><span class="tag-case t-findel">Findel</span></td>
+            <td><span class="what">Findel’s parallel case reaches the eve of trial</span></td>
+            <td>Spring Street Courthouse · Dept. 8</td>
+            <td>After 103 docket entries and a designated long-cause (multi-week) trial setting, Jeremy Findel’s own jury trial is taken off calendar and his case is disposed — the eve-of-trial resolution pattern.</td>
+          </tr>
           <tr id="h11">
             <td class="date">2021</td>
             <td><span class="tag-case t-bk">Bankruptcy</span></td>
@@ -562,6 +598,13 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
             <td>Dept. 729 (judgment enforcement)</td>
             <td>Ex parte on a claim-of-exemption timeliness issue; the motion is granted.</td>
           </tr>
+          <tr id="h17b">
+            <td class="date">2026-11-09</td>
+            <td><span class="tag-case t-civil">Civil</span></td>
+            <td><span class="what">Motion for a charging order</span></td>
+            <td>Dept. 729 (judgment enforcement)</td>
+            <td>Plaintiffs move for a charging order — the tool used to seize a debtor’s ownership interest in a business or LLC. This hearing was set for November 9, 2026, but the court has already vacated (taken off calendar) that date before it arrives; the reason is not yet in the public record.</td>
+          </tr>
           <tr id="h18">
             <td class="date">2026-11-16</td>
             <td><span class="tag-case t-civil">Civil</span></td>
@@ -589,7 +632,7 @@ footer.site{background:#010b24;border-top:1px solid var(--navy-line);padding:56p
       <a class="btn btn-chrome" href="timeline.html">See the Interactive Timeline →</a>
     </div>
 
-    <p style="font-size:.9rem;color:var(--muted-dim);margin-top:22px">Sources: LA Superior Court dockets BC643270, BC643372, BA436130, SA096430, and 23STCV24928; U.S. Bankruptcy Court, C.D. Cal. Nos. 2:21-bk-15494 and 2:21-ap-01199; the <a href="https://rulings.law/rulings/judge-h-jay-ford-iii/23stcv24928-2024-04-25.html" target="_blank" rel="noopener" style="color:var(--muted)">Greene v. Koral</a> ruling; and contemporaneous reporting (<a href="https://patch.com/california/los-angeles/jury-awards-millions-good-samaritans-weho-eatery-brawl" target="_blank" rel="noopener" style="color:var(--muted)">Patch</a>, <a href="https://beverlypress.com/2021/08/victims-in-west-hollywood-assault-awarded-72-million/" target="_blank" rel="noopener" style="color:var(--muted)">Beverly Press</a>).</p>
+    <p style="font-size:.9rem;color:var(--muted-dim);margin-top:22px">Sources: LA Superior Court dockets BC643270, BC643372, BC643450, BA436130, SA096430, and 23STCV24928; U.S. Bankruptcy Court, C.D. Cal. Nos. 2:21-bk-15494 and 2:21-ap-01199; the <a href="https://rulings.law/rulings/judge-h-jay-ford-iii/23stcv24928-2024-04-25.html" target="_blank" rel="noopener" style="color:var(--muted)">Greene v. Koral</a> ruling; and contemporaneous reporting (<a href="https://patch.com/california/los-angeles/jury-awards-millions-good-samaritans-weho-eatery-brawl" target="_blank" rel="noopener" style="color:var(--muted)">Patch</a>, <a href="https://beverlypress.com/2021/08/victims-in-west-hollywood-assault-awarded-72-million/" target="_blank" rel="noopener" style="color:var(--muted)">Beverly Press</a>).</p>
   </div>
 </section>
 
